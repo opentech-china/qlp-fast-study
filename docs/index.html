@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速学习助手</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="study.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>快速学习助手</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="authorization">Authorization Token</label>
+                <input type="text" id="authorization" placeholder="请输入你的Authorization令牌" />
+            </div>
+            <button id="startBtn">开始学习</button>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">准备就绪</div>
+        </div>
+
+        <div class="tables-container">
+            <div class="article-list-section">
+                <h2>待学习文章列表</h2>
+                <div class="table-container">
+                    <table id="articleListTable">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>文章ID</th>
+                                <th>文章标题</th>
+                            </tr>
+                        </thead>
+                        <tbody id="articleListBody">
+                            <!-- 文章列表将在这里动态生成 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <h2>学习结果</h2>
+                <div class="table-container">
+                    <table id="resultTable">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>文章ID</th>
+                                <th>状态码</th>
+                                <th>状态信息</th>
+                                <th>得分</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultTableBody">
+                            <!-- 结果将在这里动态添加 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
