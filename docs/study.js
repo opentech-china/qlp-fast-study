@@ -1,5 +1,5 @@
 // 文章数据
-const articleJson = [];
+var articleJson = [];
 
 // 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', async () => {
