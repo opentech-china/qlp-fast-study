@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         articleListBody.appendChild(row);
     });
 
+    if (localStorage.getItem("Temp_Authorization") != null) {
+        authorizationInput.value = localStorage.getItem("Temp_Authorization");
+    }
+
     // 开始学习按钮点击事件
     startBtn.addEventListener('click', () => {
         const authorization = authorizationInput.value.trim();
@@ -35,6 +39,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
+        localStorage.setItem("Temp_Authorization", authorization);
+        
         // 清空之前的结果
         resultTableBody.innerHTML = '';
 
