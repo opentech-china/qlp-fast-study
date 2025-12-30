@@ -3,7 +3,7 @@ var articleJson = [];
 
 // 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', async () => {
-    articleJson = await fetch("article251222.json").then(res => res.json());
+    articleJson = await fetch("article2512230.json").then(res => res.json());
     const articleListBody = document.getElementById('articleListBody');
     const startBtn = document.getElementById('startBtn');
     const authorizationInput = document.getElementById('authorization');
