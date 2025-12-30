@@ -11,7 +11,7 @@ headers = {"accept":"application/json, text/plain, */*",
 
 url = "https://qlpoa.whut.edu.cn/mp-api/auth/user/viewArticle?viewType=2&articleId="
 
-# url_lst = "https://qlpoa.whut.edu.cn/mp-api/auth/user/getArticleList?pageNum=1&pageSize=100&mpId=&title=&tag=&level=&orderType=0&isView=&type=&taskType=1,2,3"
+# url_lst = "https://qlpoa.whut.edu.cn/mp-api/auth/user/getArticleList?pageNum=1&pageSize=150&mpId=&title=&tag=&level=&orderType=0&isView=&type=&taskType=1,2,3"
 
 with open("article.json", "r", encoding="utf-8") as f:
     article_lst = json.loads(f.read()).get("rows")
