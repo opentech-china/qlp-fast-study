@@ -3,7 +3,7 @@ var articleJson = [];
 
 // 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', async () => {
-    articleJson = await fetch("article260106.json").then(res => res.json());
+    articleJson = await fetch("article260123.json").then(res => res.json());
     const articleListBody = document.getElementById('articleListBody');
     const startBtn = document.getElementById('startBtn');
     const authorizationInput = document.getElementById('authorization');
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 addResultToTable(index + 1, articleId, data);
 
                 // 计算随机延迟时间 (0.7-1.5秒)
-                const delay = Math.round(Math.random() * 800 + 700);
+                const delay = Math.round(Math.random() * 300 + 100);
 
                 // 使用setTimeout和箭头函数实现延迟
                 setTimeout(() => {
