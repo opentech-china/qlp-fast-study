@@ -7,7 +7,9 @@ let globalTicket = '';
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         // articleJson = await fetch("article260123.json").then(res => res.json());
-        articleJson = await fetch("https://opentech-china.github.io/qlp-fast-study/article260123.json").then(res => res.json()); // 更保险！
+        // articleJson = await fetch("https://opentech-china.github.io/qlp-fast-study/article260123.json").then(res => res.json()); // 更保险！
+        articleJson = await fetch("https://qlpoa.whut.edu.cn/mp-api/auth/user/getArticleList?pageNum=1&pageSize=150&mpId=&title=&tag=&level=&orderType=0&isView=&type=&taskType=1,2,3").then(res => res.json()); // 更通用！！
+
     } catch (e) {
         console.error('加载文章数据失败:', e);
         alert('加载文章数据失败，请检查文件是否存在');
