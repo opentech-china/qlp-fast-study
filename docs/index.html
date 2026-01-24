@@ -16,9 +16,13 @@
         <div class="input-section">
             <div class="input-group">
                 <label for="authorization">Authorization Token</label>
-                <input type="text" id="authorization" placeholder="请输入你的Authorization令牌" />
+                <!-- 新增包裹容器，实现输入框和按钮横向排列 -->
+                <div class="input-btn-wrapper">
+                    <input type="text" id="authorization" placeholder="请输入你的Authorization令牌" />
+                    <button id="getAuthBtn">自动获取authorization</button>
+                    <button id="startBtn">开始学习</button>
+                </div>
             </div>
-            <button id="startBtn">开始学习</button>
         </div>
 
         <div class="progress-section">
@@ -69,6 +73,24 @@
         </div>
     </div>
 
+    <!-- 二维码模态框 -->
+    <div class="modal" id="qrcodeModal">
+        <div class="modal-content">
+            <h2>扫码登录</h2>
+            <p>请使用微信扫描下方二维码进行登录</p>
+
+            <div class="qrcode-loading" id="qrcodeLoading">
+                <div class="loading-spinner"></div>
+                <span style="margin-left: 10px;">二维码正在加载中...</span>
+            </div>
+            <img src="" alt="登录二维码" class="qrcode-img hidden" id="qrcodeImg">
+            
+            <div class="modal-footer">
+                <button id="loadTokenBtn">加载token</button>
+                <button class="close-modal">关闭</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 
